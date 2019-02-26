@@ -1,4 +1,17 @@
 /* header */
 .header {
-  background-color: $color-gray;
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  &__logo {
+    margin-top: 61px;
+    svg, img {
+      display: block;
+      width: 99px;
+      height: 32px;
+    }
+  }
 }

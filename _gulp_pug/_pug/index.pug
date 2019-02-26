@@ -2,8 +2,7 @@ doctype
 
 html(lang="ru")
   
-  -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - siteName' //title страницы для генерации верстки  
+  -var pageTitle = 'Landing' + ' - Sports' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -14,15 +13,100 @@ html(lang="ru")
     
     include ./_include/_header
     
-    .content
-      .container
-        
-        h1 Главная 2
-        
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
+    // Section 
+    .section.app-top
 
+      .app-top__phones
+        .app-top__div
+          - for (var i=1; i<6; i++) {
+          img(src="./images/app-top/phone-" + i + ".png", alt="" class="app-top__img" + i)
+          - }
+
+      .container
+
+        .section__header.section__header--app-top
+          h1 Get a personalized football experience tailored just for you
+        .section__content.section__content--app-top
+          p Achieve super-fan status by getting tailored updates and up-to-the-minute information on your team.
+        .section__app
+          a(href="#!" target="_blank") 
+            img(src="./images/app-apple.svg", alt="" width="156" height="47")
+          a(href="#!" target="_blank") 
+            img(src="./images/app-google.svg", alt="" width="156" height="47")
+
+    // Section 
+    .section.what-it
+      .container
+
+        .what-it__wrapper
+          div.first
+            
+            .what-it__cards
+              .what-it__card
+                .match
+                  .match__top
+                    .match__content
+                      p Sat, 12:35pm
+                      p Arsenal v Chelsea
+                      p Friendly Match
+                    img(src="./tmp/what-card-logo.jpg", alt="").match__logo
+                  .match__bottom
+                    span Turn on all match notifications
+                    
+              .what-it__card.what-it__card--video
+                a(href="#!")
+                  img(src="./tmp/what-card-video.jpg", alt="")
+
+          div.last
+            .section__header
+              .section__header-info What is does
+              h2 An Enhanced Football Experience
+            .section__content.section__content--what
+              p The Guardian Live Scores app is your go to app for live scores and watching Premier League goals… Get in there, what a result!
+              p As well as videos of all the goals, you can watch match highlights, check out the latest scores and results and stay bang-up-to-date with the big football stories from The Guardian publication.
+              a(href="#!")
+                strong Learn more
+
+    // Section 
+    .section.get-started
+      .container
+
+        .section__header
+          .section__header-info Get started
+          h2 User-friendly Interface
+        .section__content
+          p The in-game goal clips from every Premier League match are available to Guardian TV customers with a Guardian subscription.
+          p So, if you’re not a subscriber, now’s the time to make that savvy call. If that’s a step too far for you, you can still watch loads of firecracker Premier League action as long as you sign in with a free Guardian iD.
+
+    // Section 
+    .section.features
+      .container
+
+        .section__header.section__header--center
+          h2 Features That Will Tailor Your Experience
+
+    // Section 
+    .section.users-say
+      .container
+
+        .section__header.section__header--center
+          h2 What Our Users Say
+
+    // Section 
+    .section.featured
+      .container
+
+        .section__header.section__header--center
+          h2 We have been featured in
+
+    // Section 
+    .section.app-bottom
+      .container
+
+        .section__header
+          h2 Get Up Close With Your Team
+        .section__content
+          p If you’re interested in the scores of more than one team (it’s OK, we won’t tell your mates you support two clubs!), you can choose the scores and competitions that matter to you using the ‘My Scores’ section. So, make sure you’re a top-flight football fan by downloading the Football Score Centre now. It’s got all this:
     
     include ./_include/_footer
     div(style="height: 1000px; background-color: #000")

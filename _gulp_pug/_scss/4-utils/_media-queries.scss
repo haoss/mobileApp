@@ -8,9 +8,57 @@
 
 @media only screen and (max-width: 1199px) {}
 
-@media only screen and (max-width: 991px) {}
+@media only screen and (max-width: 991px) {
+  .app-top {
+    &__phones {
+      &>div {
+        width: 40%;
+      }
+    }
+  }
+}
 
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+  .app-top {
+    &__phones {
+      display: none;
+    }
+  }
+  .section {
+    &__header, &__content, &__app {
+      text-align: center;
+      max-width: inherit !important;
+    }
+    &__app {
+      &>a {
+        &+a {
+          margin-left: 28px;
+        }
+      }
+      img {
+        width: 145px;
+        height: 44px;
+      }
+    }
+  }
+  h1, .h1 {
+    font-size: 30px;
+    line-height: 1.33;
+  }
+  .app-top {
+    padding-top: 150px;
+    padding-bottom: 60px;
+  }
+  .header {
+    text-align: center;
+    &__logo {
+      margin-top: 32px;
+      img, svg {
+        margin: 0 auto;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 479px) {}
 
@@ -35,7 +83,7 @@
 
 @media only screen and (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1140px;
   }
 }
 

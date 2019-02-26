@@ -20,7 +20,7 @@ html, body {
 body {
   background: $color-white;
   font-size: 16px;
-  font-family: $primary-font;
+  font-family: $font-lato;
   color: $primary-color;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -28,21 +28,21 @@ body {
 
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  color: $primary-color;
+  color: $color-dark;
   font-weight: bold;
   text-decoration: none;
   margin: 0 0 15px 0;
 }
 .h1, h1 {
-  font-size: 21px;
-  line-height: 1.05;
-  letter-spacing: -1px;
-  margin-bottom: 25px;
+  font-size: 36px;
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
 }
 .h2, h2 {
-  font-size: 18px;
-  line-height: 1.14;
-  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: 1.32;
+  margin-bottom: 25px;
 }
 .h3, h3 {
   font-size: 16px;
@@ -65,7 +65,7 @@ small, .small {
 }
 
 p {
-  line-height: 22px;
+  line-height: 1.45;
   margin: 0 0 20px 0;
 }
 
@@ -88,12 +88,14 @@ hr {
 // Links
 a, .link {
   color: $link-color;
-  text-decoration: underline;
+  text-decoration: none;
   outline: none;
   transition: color 0.35s, background 0.35s, border 0.35s;
-  &:hover, &:focus, &:active {
+  &:hover {
     color: $link-color;
-    text-decoration: none;
+    text-decoration: underline;
+  }
+  &:focus, &:active {
     outline: none;
   }
 }
@@ -114,8 +116,8 @@ img, .img {
   margin: 0 auto;
   // width: 1280px;
   width: 100%;
-  min-width: 320px;
-  padding: 0 15px;
+  min-width: 360px;
+  padding: 0 10px;
 }
 
 /* text align */

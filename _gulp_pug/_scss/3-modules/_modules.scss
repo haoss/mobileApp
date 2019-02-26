@@ -1,1 +1,135 @@
 /* modules */
+
+.section {
+  position: relative;
+  overflow: hidden;
+  &__content {
+    &--app-top {
+      max-width: 455px;
+      margin-bottom: 50px;
+    }
+    &--what {
+      max-width: 415px;
+    }
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__header {
+    &-info {
+      color: $color-blue;
+      text-transform: uppercase;
+      line-height: 21px;
+      font-weight: bold;
+      margin-bottom: 27px;
+    }
+    &--center {
+      text-align: center;
+    }
+    &--app-top {
+      max-width: 550px;
+    }
+  }
+  &__app {
+    font-size: 0;
+    &>a {
+      display: inline-block;
+      &+a {
+        margin-left: 36px;
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+}
+
+.app-top {
+  // height: 665px;
+  background: #F4F6F9;
+  padding-top: 226px;
+  padding-bottom: 164px;
+  &__phones {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1920px;
+    left: 50%;
+    transform: translateX(-50%);
+    // background: green;
+    pointer-events: none;
+    &>div {
+      width: 50%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      // background: pink;
+    }
+    img {
+      position: absolute;
+      filter: drop-shadow(-10px 20px 15px rgba($color-black, .6))
+    }
+    .app-top__img {
+      &1 {
+        bottom: 39px;
+        left: -55px;
+      }
+      &2 {
+        bottom: 433px;
+        left: 174px;
+      }
+      &3 {
+        bottom: 39px;
+        left: 223px;
+      }
+      &4 {
+        bottom: 417px;
+        left: 447px;
+      }
+      &5 {
+        bottom: 39px;
+        left: 500px;
+      }
+    }
+  }
+}
+
+.what-it {
+  min-height: 592px;
+  padding-top: 135px;
+  padding-bottom: 120px;
+  background: url('../images/bg-what.jpg') top center no-repeat;
+  background-size: cover;
+  &__wrapper {
+    margin: 0 -10px;
+    &>div {
+      width: 50%;
+      padding: 0 10px;
+      float: left;
+      &.last {
+        padding-left: 77px;
+      }
+    }
+  }
+  &__card {
+    width: 360px;
+    height: 218px;
+    position: relative;
+    border-radius: 5px;
+    background: $color-white;
+    box-shadow: 0 22px 48px rgba($color-black,.5);
+    overflow: hidden;
+    z-index: 5;
+    img {
+      display: block;
+    }
+    &+div {
+      margin-top: -30px;
+      margin-left: 107px;
+      z-index: 2;
+    }
+  }
+}

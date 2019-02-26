@@ -89,7 +89,6 @@ gulp.task('watch', () => {
       global.emittyChangedFile = filepath;
     });
   gulp.watch('_scss/**/*.scss', gulp.series('scss'));
-  gulp.watch('dist/js/*.js').on("change", browserSync.reload);
   gulp.watch('dist/css/*.css').on('change', browserSync.reload);
   gulp.watch('dist/*.html').on('change', browserSync.reload);
 });
