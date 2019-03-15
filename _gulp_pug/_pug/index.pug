@@ -46,12 +46,16 @@ html(lang="ru")
                 .match
                   .match__top
                     .match__content
-                      p Sat, 12:35pm
+                      p
+                        time Sat, 12:35pm
                       p Arsenal v Chelsea
                       p Friendly Match
                     img(src="./tmp/what-card-logo.jpg", alt="").match__logo
                   .match__bottom
                     span Turn on all match notifications
+                    label.match__turn
+                      input(type="checkbox" name="turn")
+                      span
                     
               .what-it__card.what-it__card--video
                 a(href="#!")
@@ -64,19 +68,43 @@ html(lang="ru")
             .section__content.section__content--what
               p The Guardian Live Scores app is your go to app for live scores and watching Premier League goals… Get in there, what a result!
               p As well as videos of all the goals, you can watch match highlights, check out the latest scores and results and stay bang-up-to-date with the big football stories from The Guardian publication.
-              a(href="#!")
-                strong Learn more
+              p
+                a(href="#!")
+                  strong Learn more
 
     // Section 
-    .section.get-started
+    .section.interface
       .container
 
-        .section__header
-          .section__header-info Get started
-          h2 User-friendly Interface
-        .section__content
-          p The in-game goal clips from every Premier League match are available to Guardian TV customers with a Guardian subscription.
-          p So, if you’re not a subscriber, now’s the time to make that savvy call. If that’s a step too far for you, you can still watch loads of firecracker Premier League action as long as you sign in with a free Guardian iD.
+        .interface__wrapper
+          div
+            .section__header
+              .section__header-info Get started
+              h2 User-friendly Interface
+            .section__content.section__content--interface
+              p The in-game goal clips from every Premier League match are available to Guardian TV customers with a Guardian subscription.
+              p So, if you’re not a subscriber, now’s the time to make that savvy call. If that’s a step too far for you, you can still watch loads of firecracker Premier League action as long as you sign in with a free Guardian iD.
+              p
+                a(href="#!")
+                  strong Learn more
+          div
+            
+            .interface__div
+              .interface__round
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+
+              .interface__img
+                img(src="./images/interface-mockup.png", alt="")
+                div
+                  img(src="./images/interface-img.jpg", alt="")
 
     // Section 
     .section.features

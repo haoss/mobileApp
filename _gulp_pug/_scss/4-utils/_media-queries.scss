@@ -16,6 +16,13 @@
       }
     }
   }
+  .what-it {
+    &__card {
+      &+div {
+        margin-left: 45px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -58,9 +65,109 @@
       }
     }
   }
+  .what-it {
+    padding-top: 55px;
+    padding-bottom: 40px;
+    background: {
+      image: url('../images/bg-what-mobile.jpg');
+      position: bottom center;
+      size: contain;
+    }
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+      &>div {
+        float: none;
+        padding: 0 10px !important;
+        &.first {
+          order: 2;
+          padding-top: 90px !important;
+          width: 100%;
+          max-width: 426px;
+        }
+        &.last {
+          order: 1;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
-@media only screen and (max-width: 479px) {}
+@media only screen and (max-width: 479px) {
+  .what-it {
+    &__wrapper {
+      &>div {
+        padding: 0 !important;
+        &.first {
+          max-width: 330px;
+        }
+      }
+    }
+    &__card {
+      width: 248px;
+      height: 150px;
+      &--video {
+        img {
+          width: 100%;
+        }
+      }
+      &+div {
+        margin-left: 82px;
+        margin-top: -20px;
+      }
+    }
+  }
+  .match {
+    &__top {
+      height: 115px;
+    }
+    &__bottom {
+      height: 33px;
+      line-height: 33px;
+      font-size: 13px;
+      padding: 0 10px;
+    }
+    &__turn {
+      width: 18px;
+      height: 8px;
+      right: 13px;
+      top: 13px;
+      input {
+        &~span {
+          width: 14px;
+          height: 14px;
+          left: -5px;
+          top: -4px;
+        }
+        &:checked {
+          &~span {
+            transform: translateX(15px);
+          }
+        }
+      }
+    }
+    &__logo {
+      width: 98px;
+      height: 58px;
+      left: 140px;
+      top: 31px;
+    }
+    &__content {
+      padding-left: 10px;
+      font-size: 12px;
+      width: 130px;
+      p {
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 319px) {}
 
