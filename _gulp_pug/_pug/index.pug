@@ -19,7 +19,7 @@ html(lang="ru")
       .app-top__phones
         .app-top__div
           - for (var i=1; i<6; i++) {
-          img(src="./images/app-top/phone-" + i + ".png", alt="" class="app-top__img" + i)
+          img(src="./images/app-top/phone-" + i + ".png", alt="Phone image " + i  class="app-top__img" + i)
           - }
 
       .container
@@ -30,9 +30,9 @@ html(lang="ru")
           p Achieve super-fan status by getting tailored updates and up-to-the-minute information on your team.
         .section__app
           a(href="#!" target="_blank") 
-            img(src="./images/app-apple.svg", alt="" width="156" height="47")
+            img(src="./images/app-apple.svg", alt="App store" width="156" height="47")
           a(href="#!" target="_blank") 
-            img(src="./images/app-google.svg", alt="" width="156" height="47")
+            img(src="./images/app-google.svg", alt="Google play" width="156" height="47")
 
     // Section 
     .section.what-it
@@ -50,7 +50,7 @@ html(lang="ru")
                         time Sat, 12:35pm
                       p Arsenal v Chelsea
                       p Friendly Match
-                    img(src="./tmp/what-card-logo.jpg", alt="").match__logo
+                    img(src="./tmp/what-card-logo.jpg", alt="Match logo").match__logo
                   .match__bottom
                     span Turn on all match notifications
                     label.match__turn
@@ -59,7 +59,7 @@ html(lang="ru")
                     
               .what-it__card.what-it__card--video
                 a(href="#!")
-                  img(src="./tmp/what-card-video.jpg", alt="")
+                  img(src="./tmp/what-card-video.jpg", alt="Video")
 
           div.last
             .section__header
@@ -91,20 +91,23 @@ html(lang="ru")
             
             .interface__div
               .interface__round
+                - for (var i=1; i<9; i++) {
                 div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
+                - }
 
-              .interface__img
-                img(src="./images/interface-mockup.png", alt="")
+              .interface__icon.interface__icon--one
+              .interface__icon.interface__icon--two.is-active
                 div
-                  img(src="./images/interface-img.jpg", alt="")
+                  span.interface__icon-number 7
+                  img(src="./images/icon/icon-interface-2.svg" alt="").svg-to-inline
+              .interface__icon.interface__icon--three.is-active
+                div
+                  img(src="./images/icon/icon-interface-3.svg" alt="").svg-to-inline
+                  
+              .interface__img
+                img(src="./images/interface-mockup.png", alt="Phone mockup")
+                div
+                  img(src="./images/interface-img.jpg", alt="Phone mockup image")
 
     // Section 
     .section.features
@@ -112,6 +115,13 @@ html(lang="ru")
 
         .section__header.section__header--center
           h2 Features That Will Tailor Your Experience
+
+        .features__row
+          each val, index in ['Video highlights for every Premier League and English Football League game', 'Notifications for your teams, including in-game goal clips and Premier League match highlights for Sky TV subscribers with Guardian.', 'Brand new video section including dedicated areas for your chosen team, trending video, Premier League, Football league and other major leagues', 'Match pages showing live scores, commentary, team line-ups and enhanced match stats to keep you up-to-date on all the action', 'The new picture in picture video mode means you can watch goals, manager interviews and more whilst using other areas of the app – so you don’t need to miss any of the action', 'Live updated league tables including all the domestic, European and major leagues and tournaments', 'The Guardian News Vidiprinter. Follow the goals as they go in with our new and improved Vidiprinter', 'Match reports, previews and a dedicated news section', 'And you can achieve super-fan status by personalising your home page with up-to-the-minute information on your team.']
+            div
+              .features__block
+                img(src="./images/icon/icon-features-" + (index + 1) + ".svg" , alt="").svg-to-inline
+                p= val
 
     // Section 
     .section.users-say

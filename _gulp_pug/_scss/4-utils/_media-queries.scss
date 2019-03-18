@@ -6,7 +6,13 @@
 
 @media only screen and (max-width: 1439px) {}
 
-@media only screen and (max-width: 1199px) {}
+@media only screen and (max-width: 1199px) {
+  .features {
+    &__block {
+      padding-right: 0;
+    }
+  }
+}
 
 @media only screen and (max-width: 991px) {
   .app-top {
@@ -20,6 +26,18 @@
     &__card {
       &+div {
         margin-left: 45px;
+      }
+    }
+  }
+  .interface {
+    &__div {
+      margin-right: 115px;
+    }
+  }
+  .features {
+    &__row {
+      &>div {
+        width: 50%;
       }
     }
   }
@@ -92,6 +110,121 @@
           order: 1;
           width: 100%;
         }
+      }
+    }
+  }
+  .interface {
+    padding-top: 60px;
+    padding-bottom: 595px;
+    &__wrapper {
+      flex-direction: column;
+      &>div {
+        width: 100%;
+      }
+    }
+    &__div {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: -290px;
+      margin-right: 0;
+    }
+    &__img {
+      transform: translateX(-50%) translateY(-164px);
+      &>img {
+        width: 202px;
+        height: 412px;
+      }
+      &>div {
+        left: 11px;
+        top: 49px;
+        img {
+          width: 180px
+        }
+      }
+    }
+    &__icon {
+      &.is-active {
+        width: 70px;
+        height: 70px;
+        svg {
+          width: 30px;
+          height: auto;
+        }
+      }
+    }
+    &__round {
+      &>div {
+        width: 315px;
+        height: 315px;
+        &:nth-child(2) {
+          height: 475px;
+          width: 475px;
+        }
+        &:nth-child(3) {
+          width: 625px;
+          height: 625px;
+        }
+        &:nth-child(4) {
+          width: 775px;
+          height: 775px;
+        }
+        &:nth-child(5) {
+          width: 925px;
+          height: 925px;
+        }
+        &:nth-child(6) {
+          width: 1075px;
+          height: 1075px;
+        }
+        &:nth-child(7) {
+          width: 1225px;
+          height: 1225px;
+        }
+        &:nth-child(8) {
+          width: 1375px;
+          height: 1375px;
+        }
+      }
+    }
+    &__icon {
+      &--one {
+        left: -275px;
+      }
+      &--two {
+        left: -83px;
+      }
+      &--three {
+        left: 92px;
+        top: 113px;
+        &.is-active {
+          svg {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+  .features {
+    background: #FAFAFA;
+    color: $primary-color;
+    .section__header {
+      .h2, h2 {
+        color: #444;
+      }
+    }
+    &__row {
+      &>div {
+        width: 100%;
+      }
+    }
+    &__block {
+      text-align: center;
+      img, svg {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      path {
+        fill: $color-blue;
       }
     }
   }
