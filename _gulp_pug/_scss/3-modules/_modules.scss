@@ -8,6 +8,9 @@
       max-width: 455px;
       margin-bottom: 50px;
     }
+    &--app-bottom {
+      margin-bottom: 40px;
+    }
     &--what {
       max-width: 415px;
     }
@@ -109,6 +112,7 @@
   background: url('../images/bg-what.jpg') top center no-repeat;
   background-size: cover;
   &__wrapper {
+    @include clearfix;
     margin: 0 -10px;
     &>div {
       width: 50%;
@@ -437,4 +441,230 @@
 
 .featured {
   background: #fafafa;
+  padding-bottom: 40px;
+  padding-top: 60px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    &>div {
+      margin: 0 35px;
+    }
+  }
+  &__block {
+    margin-bottom: 20px;
+    display: block;
+    img {
+      display: block;
+    }
+  }
+  .section__header {
+    padding-bottom: 40px;
+  }
+}
+
+.users-say {
+  padding-top: 65px;
+  padding-bottom: 100px;
+
+  .section__header {
+    padding-bottom: 25px;
+  }
+
+  &__carousel {
+    position: relative;
+    &::before, &::after {
+      content: '';
+      width: 134px;
+      position: absolute;
+      height: 100%;
+      background: linear-gradient(to right, $color-white, rgba($color-white,0));
+      top: 0;
+      left: 0;
+      z-index: 20;
+    }
+    &::after {
+      background: linear-gradient(to left, $color-white, rgba($color-white, 0));
+      left: inherit;
+      right: 0;
+    }
+    .slick {
+      &-slide {
+        width: 310px;
+        margin-right: 35px;
+        &:focus {
+          outline: none;
+        }
+      }
+      &-arrow {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        z-index: 25;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        background: $color-white;
+        border: 1px solid $color-blue;
+        box-shadow: 0px 5px 10px rgba($color-black,.1), 0px 10px 10px rgba($color-black,.25);
+        font-size: 0;
+        padding: 0;
+        transition: all 0.35s;
+        img {
+          width: 14px;
+          height: 14px;
+        }
+        &:hover {
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+      &-next {
+        right: 102px;
+      }
+      &-prev {
+        left: 102px;
+      }
+      &-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        bottom: -50px;
+        li {
+          float: left;
+          list-style: none;
+          margin: 0 5px;
+          height: 11px;
+          button {
+            padding: 0;
+            font-size: 0;
+            height: 11px;
+            width: 11px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 0;
+            vertical-align: 17px;
+            background: #F7F7F7;
+          }
+          &.slick-active {
+            button {
+              background: #828282;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__block {
+    border: 1px solid #828282;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: $color-white;
+    padding: 17px;
+    min-height: 160px;
+    position: relative;
+    font-size: 14px;
+    overflow: hidden;
+    p {
+      line-height: 18px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-head {
+      height: 30px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      &>div {
+        &:first-child {
+          width: 30px;
+          flex-shrink: 0;
+        }
+        &+div {
+          padding-left: 10px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+        &:hover {
+          color: $color-blue;
+        }
+      }
+    }
+    &-img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      background: $color-white;
+      border: 2px solid $color-blue;
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+    &-icon {
+      position: absolute;
+      right: 15px;
+      top: 24px;
+    }
+  }
+}
+
+.app-bottom {
+  padding-top: 105px;
+  padding-bottom: 100px;
+  &__phones {
+    position: absolute;
+    top: 0;
+    width: 1920px;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      position: absolute;
+      filter: drop-shadow(-10px 20px 15px rgba(0, 0, 0, .6));
+      left: 0;
+      top: 0;
+    }
+    .app-bottom {
+      &__img1 {
+        left: -170px;
+        top: -485px;
+      }
+      &__img2 {
+        top: 45px;
+        left: 130px;
+      }
+    }
+  }
+  &__wrapper {
+    margin: 0 -10px;
+    display: flex;
+    &>div {
+      width: 50%;
+      float: left;
+      padding: 0 10px;
+      &.last {
+        padding-left: 20px;
+      }
+    }
+  }
+  .section__header {
+    padding-bottom: 10px;
+  }
 }

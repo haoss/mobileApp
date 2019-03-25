@@ -41,6 +41,33 @@
       }
     }
   }
+  .app-bottom {
+    &__wrapper {
+      &>div {
+        width: 30%;
+        &.last {
+          width: 70%;
+        }
+      }
+    }
+    &__phones {
+      .app-bottom {
+        &__img2 {
+          left: 30px;
+          top: -55px;
+        }
+      } 
+    }
+  }
+  .footer {
+    &__nav {
+      ul {
+        li {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -225,6 +252,103 @@
       }
       path {
         fill: $color-blue;
+      }
+    }
+  }
+  .users-say__carousel {
+    .slick {
+      &-next {
+        right: 5px;
+      }
+
+      &-prev {
+        left: 5px;
+      }
+    }
+  }
+  .app-bottom {
+    padding-top: 20px;
+    padding-bottom: 310px;
+    &__wrapper {
+      &>div {
+        float: none;
+        &.first {
+          display: none;
+        }
+        &.last {
+          width: 100%;
+          padding-left: 10px;
+        }
+      }
+    }
+    &__phones {
+      top: inherit;
+      bottom: 0;
+      height: 260px;
+      width: 100%;
+      overflow: hidden;
+      img {
+        width: 418px;
+      }
+      .app-bottom { 
+        &__img1 {
+          left: -220px;
+          top: -235px;
+        }
+        &__img2 {
+          left: -60px;
+          top: 25px;
+        }
+      } 
+    }
+  }
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 45px;
+    text-align: left;
+    &__wrapper {
+      align-items: flex-start;
+      justify-content: flex-start;
+
+    }
+    &__logo {
+      margin-bottom: 10px;
+    }
+    &__wrapper {
+      flex-direction: column;
+      &>div {
+        &:first-child {
+          order: 1;
+        }
+        &:nth-child(2) {
+          order: 3
+        }
+        &:last-child {
+          order: 2;
+        }
+      }
+    }
+    &__social {
+      margin-bottom: 35px;
+    }
+    &__nav {
+      ul {
+        li {
+          padding: 0;
+          &+li {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .featured {
+    &__list {
+      &>div {
+        margin: 0 20px;
       }
     }
   }

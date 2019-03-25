@@ -2,4 +2,52 @@
 .footer {
   background-color: $color-blue;
   color: $color-white;
+  padding: 50px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  &__logo {
+    img, svg {
+      display: block;
+      width: 100px;
+      height: 32px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -10px;
+    &>div {
+      padding: 0 10px;
+      &:nth-child(2) {
+        flex-grow: 1;
+      }
+    }
+  }
+  &__nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        margin: 0;
+        padding: 0 20px;
+        display: inline-block;
+        &>a,&>span {
+          color: $color-white;
+          display: inline-block;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  &__social {
+    a {
+      display: inline-block;
+      &+a {
+        margin-left: 17px;
+      }
+    }
+  }
 }
