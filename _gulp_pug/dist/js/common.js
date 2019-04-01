@@ -3,8 +3,6 @@
 // Document ready
 $(document).on('ready', function(){
 
-  $('.svg-to-inline').svgToInline();
-
   $('.users-say__carousel').slick({
     variableWidth: true,
     centerMode: true,
@@ -14,6 +12,8 @@ $(document).on('ready', function(){
     prevArrow: '<button type="button" class="slick-prev"><img src="./images/icon/icon-arrow-prev.svg" alt=""/></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="./images/icon/icon-arrow-next.svg" alt=""/></button>'
   });
+
+  // animatedLanding();
 
   // Chrome Smooth Scroll
   try {
@@ -29,3 +29,16 @@ $(document).on('ready', function(){
 $(window).on('load', function() { });
 $(window).on('scroll', function() { });
 $(window).on('resize', function() { });
+
+function animatedLanding(){
+  var controller = new ScrollMagic.Controller();
+
+  var tween = '';
+
+  var scene1 = new ScrollMagic.Scene({
+    triggerElement: '#app-top',
+    offset: 0 
+  })
+  .setTween(tween)
+  .addTo(controller);
+}

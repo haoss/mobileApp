@@ -14,7 +14,7 @@ html(lang="ru")
     include ./_include/_header
     
     // Section 
-    .section.app-top
+    .section.app-top#app-top
 
       .app-top__phones
         .app-top__div
@@ -99,10 +99,14 @@ html(lang="ru")
               .interface__icon.interface__icon--two.is-active
                 div
                   span.interface__icon-number 7
-                  img(src="./images/icon/icon-interface-2.svg" alt="").svg-to-inline
+                  svg(width='38', height='46', viewBox='0 0 38 46', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M19 46C21.6125 46 23.75 43.8769 23.75 41.2821H14.25C14.25 43.8769 16.3638 46 19 46ZM33.25 31.8462V20.0513C33.25 12.8092 29.355 6.74667 22.5625 5.14256V3.53846C22.5625 1.58051 20.9713 0 19 0C17.0287 0 15.4375 1.58051 15.4375 3.53846V5.14256C8.62125 6.74667 4.75 12.7856 4.75 20.0513V31.8462L0 36.5641V38.9231H38V36.5641L33.25 31.8462Z', fill='#333333')
+
               .interface__icon.interface__icon--three.is-active
                 div
-                  img(src="./images/icon/icon-interface-3.svg" alt="").svg-to-inline
+                  svg(width='29', height='38', viewBox='0 0 29 38', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M25.0342 0.462712L8.36751 0.446045C6.53418 0.446045 5.03418 1.94604 5.03418 3.77938V8.77938H8.36751V7.11271H25.0342V30.446H8.36751V28.7794H5.03418V33.7794C5.03418 35.6127 6.53418 37.1127 8.36751 37.1127H25.0342C26.8675 37.1127 28.3675 35.6127 28.3675 33.7794V3.77938C28.3675 1.94604 26.8675 0.462712 25.0342 0.462712ZM11.7008 23.7794H15.0342V12.1127H3.36751V15.446H9.35085L0.0341797 24.7627L2.38418 27.1127L11.7008 17.796V23.7794Z', fill='#333333')
+
                   
               .interface__img
                 img(src="./images/interface-mockup.png", alt="Phone mockup")
@@ -117,11 +121,52 @@ html(lang="ru")
           h2 Features That Will Tailor Your Experience
 
         .features__row
-          each val, index in ['Video highlights for every Premier League and English Football League game', 'Notifications for your teams, including in-game goal clips and Premier League match highlights for Sky TV subscribers with Guardian.', 'Brand new video section including dedicated areas for your chosen team, trending video, Premier League, Football league and other major leagues', 'Match pages showing live scores, commentary, team line-ups and enhanced match stats to keep you up-to-date on all the action', 'The new picture in picture video mode means you can watch goals, manager interviews and more whilst using other areas of the app – so you don’t need to miss any of the action', 'Live updated league tables including all the domestic, European and major leagues and tournaments', 'The Guardian News Vidiprinter. Follow the goals as they go in with our new and improved Vidiprinter', 'Match reports, previews and a dedicated news section', 'And you can achieve super-fan status by personalising your home page with up-to-the-minute information on your team.']
-            div
-              .features__block
-                img(src="./images/icon/icon-features-" + (index + 1) + ".svg" , alt="").svg-to-inline
-                p= val
+          div
+            .features__block
+              svg(xmlns='http://www.w3.org/2000/svg', width='40', height='40', fill='none', viewBox='0 0 40 40')
+                path(fill='#fff', d='M35 5H5a3.3 3.3 0 0 0-3.3 3.3v20c0 1.9 1.5 3.4 3.3 3.4h8.3V35h13.4v-3.3H35c1.8 0 3.3-1.5 3.3-3.4v-20C38.3 6.5 36.8 5 35 5zm0 23.3H5v-20h30v20zm-8.3-10L15 25V11.7l11.7 6.6z')
+              p Video highlights for every Premier League and English Football League game
+          div
+            .features__block
+              svg(xmlns='http://www.w3.org/2000/svg', width='40', height='40', fill='none', viewBox='0 0 40 40')
+                path(fill='#fff', d='M12.6 6.8l-2.3-2.4c-4 3-6.7 7.8-7 13.1h3.4a14 14 0 0 1 6-10.7zm20.7 10.7h3.3c-.2-5.3-2.9-10-6.8-13l-2.4 2.3c3.4 2.4 5.6 6.3 5.9 10.7zm-3.3.8c0-5-2.7-9.4-7.5-10.5V6.7a2.5 2.5 0 1 0-5 0v1.1C12.7 8.9 10 13.2 10 18.3v8.4L6.7 30v1.7h26.6V30L30 26.7v-8.4zM20 36.7l.7-.1a3.3 3.3 0 0 0 2.6-3.3h-6.6c0 1.9 1.5 3.4 3.3 3.4z')
+              p Notifications for your teams, including in-game goal clips and Premier League match highlights for Sky TV subscribers with Guardian.
+          div
+            .features__block
+              svg(xmlns='http://www.w3.org/2000/svg', width='40', height='40', fill='none', viewBox='0 0 40 40')
+                path(fill='#fff', d='M31.7 5H8.3A3.3 3.3 0 0 0 5 8.3v23.4C5 33.5 6.5 35 8.3 35h23.4c1.8 0 3.3-1.5 3.3-3.3V8.3C35 6.5 33.5 5 31.7 5zM18.3 25h-2.5v-3.3h-3.3V25H10V15h2.5v4.2h3.3V15h2.5v10zm3.4-10h6.6c1 0 1.7.8 1.7 1.7v6.6c0 1-.8 1.7-1.7 1.7h-6.6V15zm2.5 7.5h3.3v-5h-3.3v5z')
+              p Brand new video section including dedicated areas for your chosen team, trending video, Premier League, Football league and other major leagues
+          div
+            .features__block
+              svg(width='40', height='40', viewBox='0 0 40 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M23.9997 10.0001L23.333 6.66675H8.33301V35.0001H11.6663V23.3334H20.9997L21.6663 26.6667H33.333V10.0001H23.9997Z', fill='white')
+              p Match pages showing live scores, commentary, team line-ups and enhanced match stats to keep you up-to-date on all the action
+          div
+            .features__block
+              svg(width='40', height='40', viewBox='0 0 40 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M4.21642 32.7499L6.44976 33.6833V18.6333L2.39976 28.3999C1.71643 30.0999 2.53309 32.0499 4.21642 32.7499ZM36.7164 26.5833L28.4498 6.63325C27.9331 5.38325 26.7164 4.61659 25.4331 4.58325C24.9998 4.58325 24.5498 4.64992 24.1164 4.83325L11.8331 9.91658C10.5831 10.4333 9.81642 11.6333 9.78309 12.9166C9.76642 13.3666 9.84976 13.8166 10.0331 14.2499L18.2998 34.1999C18.8164 35.4666 20.0498 36.2333 21.3498 36.2499C21.7831 36.2499 22.2164 36.1666 22.6331 35.9999L34.8998 30.9166C36.5998 30.2166 37.4164 28.2666 36.7164 26.5833ZM13.1331 14.5833C12.2164 14.5833 11.4664 13.8333 11.4664 12.9166C11.4664 11.9999 12.2164 11.2499 13.1331 11.2499C14.0498 11.2499 14.7998 11.9999 14.7998 12.9166C14.7998 13.8333 14.0498 14.5833 13.1331 14.5833ZM9.79976 32.9166C9.79976 34.7499 11.2998 36.2499 13.1331 36.2499H15.5498L9.79976 22.3499V32.9166Z', fill='white')
+              p The new picture in picture video mode means you can watch goals, manager interviews and more whilst using other areas of the app – so you don’t need to miss any of the action
+          div
+            .features__block
+              svg(width='40', height='40', viewBox='0 0 40 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M31.6667 5H8.33333C6.5 5 5 6.5 5 8.33333V31.6667C5 33.5 6.5 35 8.33333 35H31.6667C33.5 35 35 33.5 35 31.6667V8.33333C35 6.5 33.5 5 31.6667 5ZM15 28.3333H11.6667V16.6667H15V28.3333ZM21.6667 28.3333H18.3333V11.6667H21.6667V28.3333ZM28.3333 28.3333H25V21.6667H28.3333V28.3333Z', fill='white')
+              p Live updated league tables including all the domestic, European and major leagues and tournaments
+          div
+            .features__block
+              svg(width='40', height='40', viewBox='0 0 40 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M30 1.68341L13.3333 1.66675C11.5 1.66675 10 3.16675 10 5.00008V10.0001H13.3333V8.33342H30V31.6667H13.3333V30.0001H10V35.0001C10 36.8334 11.5 38.3334 13.3333 38.3334H30C31.8333 38.3334 33.3333 36.8334 33.3333 35.0001V5.00008C33.3333 3.16675 31.8333 1.68341 30 1.68341ZM16.6667 25.0001H20V13.3334H8.33333V16.6667H14.3167L5 25.9834L7.35 28.3334L16.6667 19.0167V25.0001Z', fill='white')
+              p The Guardian News Vidiprinter. Follow the goals as they go in with our new and improved Vidiprinter
+          div
+            .features__block
+              svg(width='40', height='40', viewBox='0 0 40 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M26.667 18.3333C29.4337 18.3333 31.6503 16.0999 31.6503 13.3333C31.6503 10.5666 29.4337 8.33325 26.667 8.33325C23.9003 8.33325 21.667 10.5666 21.667 13.3333C21.667 16.0999 23.9003 18.3333 26.667 18.3333ZM13.3337 18.3333C16.1003 18.3333 18.317 16.0999 18.317 13.3333C18.317 10.5666 16.1003 8.33325 13.3337 8.33325C10.567 8.33325 8.33366 10.5666 8.33366 13.3333C8.33366 16.0999 10.567 18.3333 13.3337 18.3333ZM13.3337 21.6666C9.45033 21.6666 1.66699 23.6166 1.66699 27.4999V31.6666H25.0003V27.4999C25.0003 23.6166 17.217 21.6666 13.3337 21.6666ZM26.667 21.6666C26.1837 21.6666 25.6337 21.6999 25.0503 21.7499C26.9837 23.1499 28.3337 25.0333 28.3337 27.4999V31.6666H38.3337V27.4999C38.3337 23.6166 30.5503 21.6666 26.667 21.6666Z', fill='white')
+
+              p Match reports, previews and a dedicated news section
+          div
+            .features__block
+              svg(width='40', height='40', viewBox='0 0 40 40', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M5 28.3333V31.6667H15V28.3333H5ZM5 8.33333V11.6667H21.6667V8.33333H5ZM21.6667 35V31.6667H35V28.3333H21.6667V25H18.3333V35H21.6667ZM11.6667 15V18.3333H5V21.6667H11.6667V25H15V15H11.6667ZM35 21.6667V18.3333H18.3333V21.6667H35ZM25 15H28.3333V11.6667H35V8.33333H28.3333V5H25V15Z', fill='white')
+              p And you can achieve super-fan status by personalising your home page with up-to-the-minute information on your team.
 
     // Section 
     .section.users-say
@@ -134,7 +179,9 @@ html(lang="ru")
         - for (var i=1; i<3; i++) {
         div
           .users-say__block
-            img(src="./images/icon/icon-tweet.svg", alt="").users-say__block-icon
+            svg(width='15', height='12', viewBox='0 0 15 12', fill='none', xmlns='http://www.w3.org/2000/svg').users-say__block-icon
+              path(d='M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z', fill='#03A9F4')
+
             .users-say__block-head
               div
                 .users-say__block-img
@@ -144,7 +191,8 @@ html(lang="ru")
             p I use this app every day and it's a great way to keep up to date with what's going on in football.
         div
           .users-say__block
-            img(src="./images/icon/icon-tweet.svg", alt="").users-say__block-icon
+            svg(width='15', height='12', viewBox='0 0 15 12', fill='none', xmlns='http://www.w3.org/2000/svg').users-say__block-icon
+              path(d='M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z', fill='#03A9F4')
             .users-say__block-head
               div
                 .users-say__block-img
@@ -154,7 +202,8 @@ html(lang="ru")
             p I use this app every day and it's a great way to keep up to date with what's going on in football. It's a shame it won't rotate into landscape mode like its main competitor
         div
           .users-say__block
-            img(src="./images/icon/icon-tweet.svg", alt="").users-say__block-icon
+            svg(width='15', height='12', viewBox='0 0 15 12', fill='none', xmlns='http://www.w3.org/2000/svg').users-say__block-icon
+              path(d='M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z', fill='#03A9F4')
             .users-say__block-head
               div
                 .users-say__block-img
@@ -164,7 +213,8 @@ html(lang="ru")
             p Good for scores and commentary but the team lineups have stopped working. 
         div
           .users-say__block
-            img(src="./images/icon/icon-tweet.svg", alt="").users-say__block-icon
+            svg(width='15', height='12', viewBox='0 0 15 12', fill='none', xmlns='http://www.w3.org/2000/svg').users-say__block-icon
+              path(d='M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z', fill='#03A9F4')
             .users-say__block-head
               div
                 .users-say__block-img
@@ -174,7 +224,8 @@ html(lang="ru")
             p Good for watching the goals and great for highlights instead of waiting till 10:30 before you can watch highlights on March of the day also no need of sky go
         div
           .users-say__block
-            img(src="./images/icon/icon-tweet.svg", alt="").users-say__block-icon
+            svg(width='15', height='12', viewBox='0 0 15 12', fill='none', xmlns='http://www.w3.org/2000/svg').users-say__block-icon
+              path(d='M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z', fill='#03A9F4')
             .users-say__block-head
               div
                 .users-say__block-img
@@ -219,7 +270,6 @@ html(lang="ru")
                 img(src="./images/app-google.svg", alt="Google play" width="156" height="47")
 
     include ./_include/_footer
-    div(style="height: 1000px; background-color: #000")
 
     // Load Scripts
     include ./_include/_footer-js
