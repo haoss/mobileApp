@@ -28,7 +28,7 @@ html(lang="ru")
           h1 Get a personalized football experience tailored just for you
         .section__content.section__content--app-top
           p Achieve super-fan status by getting tailored updates and up-to-the-minute information on your team.
-        .section__app
+        .section__app.section__app--app-top
           a(href="#!" target="_blank") 
             img(src="./images/app-apple.svg", alt="App store" width="156" height="47")
           a(href="#!" target="_blank") 
@@ -62,7 +62,7 @@ html(lang="ru")
                   img(src="./tmp/what-card-video.jpg", alt="Video")
 
           div.last
-            .section__header
+            .section__header.section__header--what
               .section__header-info What is does
               h2 An Enhanced Football Experience
             .section__content.section__content--what
@@ -78,7 +78,7 @@ html(lang="ru")
 
         .interface__wrapper
           div
-            .section__header
+            .section__header.section__header--interface
               .section__header-info Get started
               h2 User-friendly Interface
             .section__content.section__content--interface
@@ -89,10 +89,10 @@ html(lang="ru")
                   strong Learn more
           div
             
-            .interface__div
+            .interface__divs
               .interface__round
                 - for (var i=1; i<9; i++) {
-                div
+                div(class="interface__div interface__div--" + i)
                 - }
 
               .interface__icon.interface__icon--one
@@ -117,7 +117,7 @@ html(lang="ru")
     .section.features
       .container
 
-        .section__header.section__header--center
+        .section__header.section__header--features.section__header--center
           h2 Features That Will Tailor Your Experience
 
         .features__row
@@ -172,7 +172,7 @@ html(lang="ru")
     .section.users-say
       .container
 
-        .section__header.section__header--center
+        .section__header.section__header--users-say.section__header--center
           h2 What Our Users Say
 
       .users-say__carousel
@@ -239,7 +239,7 @@ html(lang="ru")
     .section.featured
       .container
 
-        .section__header.section__header--center
+        .section__header.section__header--featured.section__header--center
           h2 We have been featured in
 
         .featured__list
@@ -259,11 +259,11 @@ html(lang="ru")
         .app-bottom__wrapper
           div.first 
           div.last
-            .section__header
+            .section__header.section__header--app-bottom
               h2 Get Up Close With Your Team
             .section__content.section__content--app-bottom
               p If you’re interested in the scores of more than one team (it’s OK, we won’t tell your mates you support two clubs!), you can choose the scores and competitions that matter to you using the ‘My Scores’ section. So, make sure you’re a top-flight football fan by downloading the Football Score Centre now. It’s got all this:
-            .section__app
+            .section__app.section__app--app-bottom
               a(href="#!" target="_blank") 
                 img(src="./images/app-apple.svg", alt="App store" width="156" height="47")
               a(href="#!" target="_blank") 

@@ -78,7 +78,7 @@
     }
     img {
       position: absolute;
-      filter: drop-shadow(-10px 20px 15px rgba($color-black, .6))
+      filter: drop-shadow(-10px 20px 15px rgba($color-black, .6));
     }
     .app-top__img {
       &1 {
@@ -259,7 +259,7 @@
       overflow: hidden;
     }
   }
-  &__div {
+  &__divs {
     position: relative;
     float: right;
     width: 0px;
@@ -283,43 +283,43 @@
       &:nth-child(3) {
         width: 800px;
         height: 800px;
-        opacity: 0.15;
+        border-color: rgba($color-blue,.15);
         border-style: solid;
       }
       &:nth-child(4) {
         width: 1000px;
         height: 1000px;
-        opacity: 0.13;
+        border-color: rgba($color-blue,.13);
         border-style: solid;
       }
       &:nth-child(5) {
         width: 1200px;
         height: 1200px;
-        opacity: 0.11;
+        border-color: rgba($color-blue,.11);
         border-style: solid;
       }
       &:nth-child(6) {
         width: 1400px;
         height: 1400px;
-        opacity: 0.09;
+        border-color: rgba($color-blue,.09);
         border-style: solid;
       }
       &:nth-child(7) {
         width: 1600px;
         height: 1600px;
-        opacity: 0.08;
+        border-color: rgba($color-blue,.08);
         border-style: solid;
       }
       &:nth-child(8) {
         width: 1800px;
         height: 1800px;
-        opacity: 0.05;
+        border-color: rgba($color-blue,.05);
         border-style: solid;
       }
       &:nth-child(9) {
         width: 2000px;
         height: 2000px;
-        opacity: 0.01;
+        border-color: rgba($color-blue,.01);
         border-style: solid;
       }
     }

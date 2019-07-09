@@ -14,7 +14,8 @@ const gulp = require('gulp'),
       tinypng = require('gulp-tinypng'),
       rimraf = require('rimraf'),
       rename = require('gulp-rename'),
-      wait = require('gulp-wait2')
+      wait = require('gulp-wait2'),
+      critical = require('critical').stream
 ;
 
 // Ключ активации для оптимизации 500 бесплатных картинок в месяц на сайте https://tinypng.com/
@@ -69,6 +70,18 @@ gulp.task('rimraf', function (cb) {
 });
 gulp.task('compress', gulp.series('tiny', 'rimraf'));
 
+// Generate & Inline Critical-path CSS
+gulp.task('critical', function () {
+  return gulp.src('dist/index.html')
+    .pipe(critical({
+      base: 'dist/', 
+      inline: true, 
+      css: ['dist/css/style.min.css']
+    }))
+    .on('error', function(err) { log.error(err.message); })
+    .pipe(gulp.dest('dist/'));
+});
+
 // Static server
 gulp.task('browser-sync', function () {
   browserSync.init({
@@ -79,6 +92,7 @@ gulp.task('browser-sync', function () {
     // reloadDelay: 3000
   });
 });
+
 
 // Your "watch" task
 gulp.task('watch', () => {
