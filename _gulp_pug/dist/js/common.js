@@ -155,5 +155,5 @@ function animatedLanding(){
 
 $(document).ready(animatedLanding);
 $(window).on('load', function() {
-  // $(".loader").delay(400).fadeOut("slow");
+  $(".loader").delay(400).fadeOut("slow");
 });
