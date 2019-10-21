@@ -12,16 +12,6 @@ $(document).on('ready', function(){
     prevArrow: '<button type="button" class="slick-prev"><img src="./images/icon/icon-arrow-prev.svg" alt="Prev slide"/></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="./images/icon/icon-arrow-next.svg" alt="Next slide"/></button>'
   });
-
-  // Chrome Smooth Scroll
-  try {
-    $.browserSelector();
-    if($("html").hasClass("chrome")) {
-      $.smoothScroll();
-    }
-  } catch(err) {
-
-  };
 });
 
 $(window).on('scroll', function() { });
